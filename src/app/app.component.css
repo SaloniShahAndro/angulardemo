@@ -1,0 +1,27 @@
+.buttons{
+    margin: auto;
+    width: 60%;
+    padding: 5px;
+}
+
+.example-icon {
+    padding: 0 14px;
+    color: white
+  }
+  
+  .example-spacer {
+    flex: 1 1 auto;
+  }
+
+  .app-toolbar {
+    position: sticky;
+    position: -webkit-sticky; /* For macOS/iOS Safari */
+    top: 0; /* Sets the sticky toolbar to be on top */
+    z-index: 1000; /* Ensure that your app's content doesn't overlap the toolbar */
+}
+
+.demo-container {
+    min-width: 100%;
+    min-height: 700px;
+  }
+  

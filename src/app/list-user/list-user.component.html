@@ -1,0 +1,59 @@
+
+
+
+<div class="col-md-6" >
+    
+  <h2> User Details</h2>
+
+  <input type="text" [(ngModel)]="terms" class="form-control col-md-6" style="position:center" placeholder="Search here">
+
+  <br/>
+  <button class="btn btn-danger" (click)="addUser()"> Add User</button>
+  <br/>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th class="hidden">Id</th>
+        <th>FirstName</th>
+        <th>LastName</th>
+        <th>Email</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of users | filter: terms | paginate: { itemsPerPage: 5, currentPage: p }; let i = index" >
+        <td class="hidden">{{user.id}}</td>
+        <td>{{user.firstName}}</td>
+        <td>{{user.lastName}}</td>
+        <td>{{user.email}}</td>
+        <td>
+          <button class="btn btn-danger" (click)="deleteUser(user)" > Delete</button>
+          <button class="btn btn-danger" (click)="editUser(user)" style="margin-left:20px" > Edit</button>
+        </td>
+      </tr>
+
+    </tbody>
+
+    
+  </table>
+  <pagination-controls (pageChange)="p = $event" class="pagination"></pagination-controls>
+
+  <!-- pager -->
+  <!-- <ul *ngIf="pager.pages && pager.pages.length" class="pagination">
+    <li [ngClass]="{disabled:pager.currentPage === 1}" class="page">
+        <a (click)="setPage(1)">First</a>
+    </li>
+    <li [ngClass]="{disabled:pager.currentPage === 1}" class="page" >
+        <a (click)="setPage(pager.currentPage - 1)">Previous</a>
+    </li>
+    <li *ngFor="let page of pager.pages" [ngClass]="{active:pager.currentPage === page}" class="page">
+        <a (click)="setPage(page)">{{page}}</a>
+    </li>
+    <li [ngClass]="{disabled:pager.currentPage === pager.totalPages}" class="page">
+        <a (click)="setPage(pager.currentPage + 1)">Next</a>
+    </li>
+    <li [ngClass]="{disabled:pager.currentPage === pager.totalPages}" class="page">
+        <a (click)="setPage(pager.totalPages)">Last</a>
+    </li>
+</ul> -->
+</div>

@@ -1,0 +1,22 @@
+.table{
+    width: 100%
+}
+.pagination{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+.page{
+    display: inline-block;  
+}
+.page a{
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+.active {
+    background-color:green;
+    color: white;
+}
+.page a:hover:not(.active) {background-color: #ddd;}

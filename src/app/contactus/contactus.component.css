@@ -1,0 +1,36 @@
+.example-small-box {
+    display: block;
+    margin: 16px;
+    padding: 16px;
+    border-radius: 8px;
+  }
+  
+  .example-small-box {
+    height: 200px;
+    width: 200px;
+  }
+  
+  .example-large-box {
+    height: 300px;
+    width: 700px;
+    display: grid;
+  grid-template-columns: 400px 400px;
+
+  padding: 10px;
+  }
+
+  .grid-item {
+    background-color: rgba(255, 255, 255, 0.8);
+  
+    text-align: center;
+  }
+  
+  .page{
+    min-width:1000px;
+  }
+  .tab{
+    position: sticky;
+    position: -webkit-sticky; /* For macOS/iOS Safari */
+    top: 0; /* Sets the sticky toolbar to be on top */
+    z-index: 1000; /* Ensure that your app's content doesn't overlap the toolbar */
+  }

@@ -1,0 +1,23 @@
+<div class="page">
+<mat-tab-group class="tab">
+  <mat-tab label="small" >  
+    
+      <div *ngFor="let user of users " >
+        <div class="example-small-box mat-elevation-z4">
+        <p>{{user.firstName}}</p><br/>
+        <p>{{user.lastName}}</p><br/>
+        <p>{{user.email}}</p><br/>
+     </div>
+    </div>
+  </mat-tab>
+  <mat-tab label="large" > 
+      <div *ngFor="let user of users " class="example-large-box">
+          <div class=" grid-item mat-elevation-z4">
+          <p>{{user.firstName}}</p><br/>
+          <p>{{user.lastName}}</p><br/>
+          <p>{{user.email}}</p><br/>
+       </div>
+      </div>
+  </mat-tab>
+</mat-tab-group>
+</div>
